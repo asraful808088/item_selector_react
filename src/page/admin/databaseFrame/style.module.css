@@ -1,0 +1,209 @@
+.root {
+  width: 1200px;
+  position: relative;
+  margin: auto;
+  min-height: 900px;
+  overflow-y: scroll;
+}
+
+.root .header {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+}
+.root .header .icon {
+  width: 200px;
+  margin-right: 50px;
+}
+.root .header .name {
+  font-size: 100px;
+  color: aliceblue;
+}
+
+.root .items {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+.root .items .usersList {
+  width: 25%;
+  background-color: rgb(0, 0, 0);
+  min-height: 100%;
+}
+.active {
+  background-color: rgba(240, 248, 255, 0.336);
+}
+.root .items .usersList .allRecord {
+  height: 50px;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.root .items .usersList .item {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+.root .items .userinfo {
+  width: 72%;
+}
+.root .items div .itemHeader {
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.root .items div .itemHeader .close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  display: none;
+}
+.root .items div .itemHeader .close:hover {
+  transform: scale(0.8);
+}
+.root .items div .itemHeader .navButton {
+  height: 30px;
+  width: 30px;
+  display: none;
+  position: absolute;
+  left: 5px;
+}
+.root .items div .accoutItems {
+  width: 100%;
+  position: relative;
+}
+.root .items div .accoutItems > .item {
+  width: 98%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  height: 70px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  margin-left: 0;
+  transition: 0.5s;
+}
+.root .items div .accoutItems > .item:hover {
+  color: black;
+  background-color: whitesmoke;
+}
+.root .items div .options {
+  font-size: 50px;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.root .items div .accoutItems > .detailsitem {
+  width: 98%;
+  background-color: rgb(0, 0, 0);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+  margin-left: 0;
+  transition: 0.5s;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+}
+.root .items div .accoutItems > .detailsitem .fields {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.root .items div .accoutItems > .detailsitem .fields input {
+  font-size: 20px;
+}
+.root .items div .accoutItems > .detailsitem .yesOrNo {
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+}
+.root .items div .accoutItems > .detailsitem .yesOrNo .option {
+  width: 30px;
+  position: relative;
+  margin: 5px;
+  transition: 0.4s;
+}
+.root .items div .accoutItems > .detailsitem .yesOrNo .option:hover {
+  transform: scale(0.95);
+}
+@media only screen and (max-width: 1200px) {
+  .root {
+    width: 900px;
+  }
+  .root .items .usersList .item {
+    font-size: 12px;
+  }
+
+  .root .items .usersList .allRecord {
+    height: 40px;
+  }
+  .root .items div .accoutItems > .item {
+    height: 50px;
+  }
+  .root .header .name {
+    font-size: 60px;
+    color: aliceblue;
+  }
+  .root .items div .itemHeader {
+    font-size: 25px;
+  }
+  .root .items div .options {
+    font-size: 30px;
+  }
+  .root .items div .accoutItems > .detailsitem .fields,
+  .root .items div .accoutItems > .detailsitem .fields input {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .root .items .usersList {
+    position: absolute;
+    min-width: 350px;
+    z-index: 11;
+    left: -100%;
+    transition: 0.4s;
+    height: 100%;
+  }
+  .root .items div .itemHeader .navButton {
+    display: block;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .root .items div .itemHeader .navButton:hover {
+    transform: scale(0.97);
+  }
+  .root .items .userinfo {
+    min-width: 95%;
+  }
+  .root .items div .itemHeader .close {
+    display: block;
+  }
+}

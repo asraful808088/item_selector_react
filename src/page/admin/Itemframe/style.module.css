@@ -1,0 +1,31 @@
+.item {
+  height: 300px;
+  flex-basis: 200px;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.item:hover {
+  transform: scale(0.95);
+}
+.item .icon {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.item .name {
+  font-size: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+.item .counter {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 20px;
+  margin-top: 20px;
+}
